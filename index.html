@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revista Digital - Inicio</title>
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+    <header>
+        <div class="menu-toggle" id="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+        <nav class="nav" id="nav">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="./pages/blog.html">Artículos</a></li>
+                <li><a href="./pages/recursos.html">Recursos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Página 1: Presentación de la Institución -->
+        <section id="home" class="page">
+            <h1>Institución Educativa XYZ</h1>
+            <p>Bienvenidos a la Institución Educativa XYZ, donde nos dedicamos a la excelencia académica y el desarrollo integral de nuestros estudiantes.</p>
+            <h2>Reseña del lugar</h2>
+            <p>Ubicados en el corazón de la ciudad, ofrecemos un ambiente seguro y estimulante para el aprendizaje. Fundada en 1990, nuestra institución ha crecido y evolucionado para satisfacer las necesidades educativas de la comunidad.</p>
+            <h2>Ubicación</h2>
+            <div id="map"></div>
+        </section>
+    </main>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script>
+        const hamburger = document.getElementById("hamburger");
+        const nav = document.getElementById("nav");
+
+        hamburger.addEventListener("click", () => {
+            nav.classList.toggle("show");
+        });
+
+        function initMap() {
+            var location = {lat: -25.363, lng: 131.044};
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 4,
+                center: location
+            });
+            var marker = new google.maps.Marker({
+                position: location,
+                map: map
+            });
+        }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
+</body>
+</html>

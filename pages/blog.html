@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revista Digital - Artículos</title>
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+<body>
+    <header>
+        <div class="menu-toggle" id="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+        <nav class="nav" id="nav">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="./blog.html">Artículos</a></li>
+                <li><a href="./recursos.html">Recursos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Página 2: Artículos -->
+        <section id="articles" class="page">
+            <h1>Artículos</h1>
+            <div id="indice">
+                <h2>Índice de Temas</h2>
+                <ul>
+                    <li><a href="#art1">Artículo 1</a></li>
+                    <li><a href="#art2">Artículo 2</a></li>
+                    <li><a href="#art3">Artículo 3</a></li>
+                    <li><a href="#art4">Artículo 4</a></li>
+                    <li><a href="#art5">Artículo 5</a></li>
+                </ul>
+            </div>
+            <div class="article" id="art1">
+                <h2>Artículo 1</h2>
+                <p>Resumen del artículo 1.</p>
+                <button onclick="scrollToTop()">Volver arriba</button>
+            </div>
+            <div class="article" id="art2">
+                <h2>Artículo 2</h2>
+                <p>Resumen del artículo 2.</p>
+                <button onclick="scrollToTop()">Volver arriba</button>
+            </div>
+            <div class="article" id="art3">
+                <h2>Artículo 3</h2>
+                <p>Resumen del artículo 3.</p>
+                <button onclick="scrollToTop()">Volver arriba</button>
+            </div>
+            <div class="article" id="art4">
+                <h2>Artículo 4</h2>
+                <p>Resumen del artículo 4.</p>
+                <button onclick="scrollToTop()">Volver arriba</button>
+            </div>
+            <div class="article" id="art5">
+                <h2>Artículo 5</h2>
+                <p>Resumen del artículo 5.</p>
+                <button onclick="scrollToTop()">Volver arriba</button>
+            </div>
+        </section>
+    </main>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script>
+        const hamburger = document.getElementById("hamburger");
+        const nav = document.getElementById("nav");
+
+        hamburger.addEventListener("click", () => {
+            nav.classList.toggle("show");
+        });
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
